@@ -24,7 +24,7 @@ def is_opened(name: str, identifier: str) -> bool:
 
     for result in results:
         if result['value']['id']['$oid'] == identifier:
-            return result.get['value']['online']
+            return result['value']['online']
 
     print('Restaurant name disappeared (may due to brute force restrictions)!')
     return False
