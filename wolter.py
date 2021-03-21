@@ -51,7 +51,7 @@ if __name__ == '__main__':
     public_url = restaurant_data['value']['public_url']
 
     while not is_opened(restaurant_name, restaurant_id):
-        print("Restaurant is closed, sleeping for seconds!")
+        print(f"Restaurant is closed, sleeping for {INTERVAL_TIME_SEC} seconds!")
         time.sleep(INTERVAL_TIME_SEC)
 
     print(f"Restaurant is open! visit: {public_url}")
